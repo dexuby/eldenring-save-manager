@@ -13,17 +13,17 @@ import org.jetbrains.annotations.NotNull;
 import java.io.PrintStream;
 import java.util.*;
 
-public class EldenRingSave {
+public class EldenRingSaveManager {
 
-    private static class EldenRingSaveSingleton {
+    private static class EldenRingSaveManagerSingleton {
 
-        private static final EldenRingSave INSTANCE = new EldenRingSave();
+        private static final EldenRingSaveManager INSTANCE = new EldenRingSaveManager();
 
     }
 
     public static void main(@NotNull final String[] args) {
 
-        EldenRingSave.getInstance().initialize();
+        EldenRingSaveManager.getInstance().initialize();
 
     }
 
@@ -34,7 +34,7 @@ public class EldenRingSave {
             .selfService()
             .build();
 
-    private EldenRingSave() {
+    private EldenRingSaveManager() {
 
     }
 
@@ -58,9 +58,9 @@ public class EldenRingSave {
 
     }
 
-    public static EldenRingSave getInstance() {
+    public static EldenRingSaveManager getInstance() {
 
-        return EldenRingSaveSingleton.INSTANCE;
+        return EldenRingSaveManagerSingleton.INSTANCE;
 
     }
 

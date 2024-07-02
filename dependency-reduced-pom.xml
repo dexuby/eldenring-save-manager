@@ -20,7 +20,7 @@
             <manifest>
               <addClasspath>true</addClasspath>
               <classpathPrefix>lib/</classpathPrefix>
-              <mainClass>dev.dexuby.eldenringsavemanager.EldenRingSave</mainClass>
+              <mainClass>dev.dexuby.eldenringsavemanager.EldenRingSaveManager</mainClass>
             </manifest>
           </archive>
         </configuration>
