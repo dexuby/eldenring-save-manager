@@ -1,3 +1,8 @@
+# Elden Ring Save Manager
+
+An easy-to-use save manager for action role-playing game 'Elden Ring' developed by FromSoftware and published by Bandai
+Namco.
+
 ## Features
 
 ### Save copying:
