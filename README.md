@@ -33,7 +33,7 @@ would be used straight away.
 ### Cross-platform:
 
 Since this project is written in Java and doesn't use Windows specific features or environment variables it can
-technically be used on all operating systems that have the JRE installed.
+technically be used on all operating systems that have a JRE installed.
 
 ### Easy to use command-line menu:
 
