@@ -3,6 +3,12 @@
 An easy-to-use save manager for the action role-playing game 'Elden Ring' developed by FromSoftware and published by Bandai
 Namco.
 
+## How to use
+Download the latest release (or compile the project yourself) then run it from your command line using: ```java -jar
+eldenring-save-manager-<version>.jar```
+
+To select a menu option simply type the number from the brackets in-front and confirm it by pressing enter.
+
 ## Features
 
 ### Save copying:

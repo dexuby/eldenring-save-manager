@@ -1,4 +1,4 @@
-package dev.dexuby.eldenringsavemanager;
+package dev.dexuby.eldenringsavemanager.util;
 
 import org.jetbrains.annotations.NotNull;
 

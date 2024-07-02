@@ -1,7 +1,7 @@
 package dev.dexuby.eldenringsavemanager.save;
 
-import dev.dexuby.eldenringsavemanager.ByteAnalyzer;
-import dev.dexuby.eldenringsavemanager.ByteReader;
+import dev.dexuby.eldenringsavemanager.util.ByteAnalyzer;
+import dev.dexuby.eldenringsavemanager.util.ByteReader;
 import dev.dexuby.eldenringsavemanager.common.dependencyinjection.ServiceProvider;
 import dev.dexuby.eldenringsavemanager.common.tuple.ImmutableKeyValuePair;
 import dev.dexuby.eldenringsavemanager.common.tuple.ImmutablePair;

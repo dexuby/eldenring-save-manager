@@ -1,4 +1,4 @@
-package dev.dexuby.eldenringsavemanager;
+package dev.dexuby.eldenringsavemanager.util;
 
 public class ByteReader {
 
