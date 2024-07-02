@@ -25,7 +25,7 @@ public class PrintSourceInfoMenuOption extends MenuOption {
     @Override
     public String prepareRender() {
 
-        return String.format("[%d] Print source info.", super.getIndex());
+        return String.format("[%d] Print source file info.", super.getIndex());
 
     }
 
@@ -33,7 +33,8 @@ public class PrintSourceInfoMenuOption extends MenuOption {
     public void execute() {
 
         if (super.getParent().getSession().getSource() == null) {
-            this.printStream.println("No source is currently loaded.");
+            this.printStream.println("No source file is currently loaded.");
+            super.getParent().render();
             return;
         }
 

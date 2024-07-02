@@ -30,7 +30,7 @@ public class LoadTargetMenuOption extends MenuOption {
     @Override
     public String prepareRender() {
 
-        return String.format("[%d] Load target.", super.getIndex());
+        return String.format("[%d] Load target file.", super.getIndex());
 
     }
 
@@ -39,6 +39,10 @@ public class LoadTargetMenuOption extends MenuOption {
 
         this.printStream.print("Provide the save file path: ");
         super.getParent().getSession().queueInputConsumer(new LoadSaveAction((processedSaveFile) -> {
+            if (processedSaveFile == null) {
+                super.getParent().render();
+                return;
+            }
             if (processedSaveFile instanceof ExtractedProcessedSaveFile) {
                 Logger.warn("You can't load an extracted save file as a target.");
                 return;

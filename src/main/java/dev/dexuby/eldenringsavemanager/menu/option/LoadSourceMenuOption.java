@@ -27,7 +27,7 @@ public class LoadSourceMenuOption extends MenuOption {
     @Override
     public String prepareRender() {
 
-        return String.format("[%d] Load source.", super.getIndex());
+        return String.format("[%d] Load source file.", super.getIndex());
 
     }
 
@@ -36,6 +36,10 @@ public class LoadSourceMenuOption extends MenuOption {
 
         this.printStream.print("Provide the save file path: ");
         super.getParent().getSession().queueInputConsumer(new LoadSaveAction((processedSaveFile) -> {
+            if (processedSaveFile == null) {
+                super.getParent().render();
+                return;
+            }
             super.getParent().getSession().setSource(processedSaveFile);
             this.printStream.println("Source has been updated to: " + processedSaveFile.getFilePath());
             this.printStream.println();

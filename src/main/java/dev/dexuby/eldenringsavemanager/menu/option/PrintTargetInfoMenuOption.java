@@ -25,7 +25,7 @@ public class PrintTargetInfoMenuOption extends MenuOption {
     @Override
     public String prepareRender() {
 
-        return String.format("[%d] Print target info.", super.getIndex());
+        return String.format("[%d] Print target file info.", super.getIndex());
 
     }
 
@@ -33,7 +33,8 @@ public class PrintTargetInfoMenuOption extends MenuOption {
     public void execute() {
 
         if (super.getParent().getSession().getTarget() == null) {
-            this.printStream.println("No target is currently loaded.");
+            this.printStream.println("No target file is currently loaded.");
+            super.getParent().render();
             return;
         }
 

@@ -31,10 +31,11 @@ public class MainMenu extends Menu {
     @Override
     public void render() {
 
-        super.getOutput().println("======== Main Menu ========");
         super.getOutput().println();
-        super.getOutput().println("Loaded source file: " + Optional.ofNullable(super.getSession().getSource()).map(ProcessedSaveFile::toString).orElse("<None>"));
-        super.getOutput().println("Loaded target file: " + Optional.ofNullable(super.getSession().getTarget()).map(ProcessedSaveFile::toString).orElse("<None>"));
+        super.getOutput().println("-=============={ Elden Ring Save Manager }==============-");
+        super.getOutput().println();
+        super.getOutput().println(">> Loaded source file: " + Optional.ofNullable(super.getSession().getSource()).map(ProcessedSaveFile::toString).orElse("< None >"));
+        super.getOutput().println(">> Loaded target file: " + Optional.ofNullable(super.getSession().getTarget()).map(ProcessedSaveFile::toString).orElse("< None >"));
         super.getOutput().println();
         super.render();
 

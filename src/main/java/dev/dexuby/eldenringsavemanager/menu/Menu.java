@@ -84,8 +84,11 @@ public abstract class Menu implements InputConsumer {
 
         if (index != -1) {
             final MenuOption option = this.options.get(index);
-            if (option != null)
+            if (option != null) {
                 option.execute();
+            } else {
+                this.render();
+            }
         } else {
             this.render();
         }

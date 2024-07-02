@@ -60,6 +60,7 @@ public class CopySaveAction extends Action implements InputConsumer {
             index = Integer.parseInt(input);
         } catch (final NumberFormatException ex) {
             Logger.error(ex, "The provided index was invalid.");
+            this.session.getActiveMenu().render();
             return;
         }
 
@@ -67,6 +68,7 @@ public class CopySaveAction extends Action implements InputConsumer {
             final RegularSave save = this.saveManager.findSaveByIndex(this.regularProcessedSaveFile, index);
             if (save == null) {
                 Logger.warn("No save found for index {}.", index);
+                this.session.getActiveMenu().render();
                 return;
             }
             this.save = save;

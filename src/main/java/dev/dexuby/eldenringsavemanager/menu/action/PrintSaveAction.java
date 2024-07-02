@@ -45,7 +45,6 @@ public class PrintSaveAction extends Action {
             default -> {
             }
         }
-        this.printStream.println();
 
     }
 

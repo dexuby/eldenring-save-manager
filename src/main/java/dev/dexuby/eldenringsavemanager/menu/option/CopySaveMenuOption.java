@@ -42,7 +42,8 @@ public class CopySaveMenuOption extends MenuOption {
         final ProcessedSaveFile source = super.getParent().getSession().getSource();
         final RegularProcessedSaveFile target = super.getParent().getSession().getTarget();
         if (source == null || target == null) {
-            Logger.warn("Either the source or the target hasn't been loaded yet.");
+            Logger.error("Either the source or the target hasn't been loaded yet.");
+            super.getParent().render();
             return;
         }
 

@@ -29,7 +29,7 @@ public class ListMenuOption extends MenuOption {
     @Override
     public String prepareRender() {
 
-        return String.format("[%d] Lists all available custom saves.", super.getIndex());
+        return String.format("[%d] Lists all stored custom saves.", super.getIndex());
 
     }
 
@@ -37,7 +37,7 @@ public class ListMenuOption extends MenuOption {
     public void execute() {
 
         this.printStream.println();
-        this.printStream.println("Custom saves:");
+        this.printStream.println("Stored custom saves:");
         final List<File> saveFiles = this.fileManager.getExtractedSaveFiles();
         if (!saveFiles.isEmpty()) {
             for (final File file : saveFiles) {
@@ -47,7 +47,6 @@ public class ListMenuOption extends MenuOption {
         } else {
             this.printStream.println("- <None>");
         }
-        this.printStream.println();
         super.getParent().render();
 
     }
